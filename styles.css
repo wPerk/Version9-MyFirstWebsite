@@ -1,0 +1,191 @@
+/* Reset some basic styles */
+html, body {
+    background-color: #dbdbdb;                              /* Sets a light gray background */
+    color: #333;                                            /* Sets a dark gray text color for readability */
+    font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
+    padding: 0;                                             /* Removes default padding around the page */
+    margin: 0;                                              /* Removes default padding around the page */
+}
+
+header {
+    background-color: #444;                                 /* Sets a gray background for the header */
+    color: white;                                           /* Makes the text color white for contrast */
+    text-align: center;                                     /* Centers the header content */
+    padding: 30px 20px;                                     /* Adds spacing inside the header */
+    font-size: 24px;                                        /* Increases font size for better visibility */
+}
+
+footer {
+    background-color: #444;                                 /* Sets a dark background color for the footer */
+    color: white;                                           /* Makes the footer text white */
+    text-align: center;                                     /* Centers the text in the footer */
+    padding: 5px 0;                                         /* Adds vertical padding inside the footer */
+    margin-top: 20px;                                       /* Adds space above the footer */
+    position: relative;                                     /* Place the footer in its position relative to its "normal flow" position */
+}
+
+/* Navbar Properties */
+nav {
+    background-color: #444;                                 /* Set background color for navigation */
+    padding: 10px;                                          /* Add padding to navigation */
+    z-index: 10;
+}
+    nav ul {
+        list-style-type: none;                              /* Remove default list style for navigation ul */
+        margin: 0;                                          /* Remove default margin */
+        padding: 0;                                         /* Remove default padding */
+        display: flex;                                      /* Use flexbox for the navbar */
+        justify-content: space-between;                     /* Align items to the sides */
+    }
+        nav ul li {
+            padding: 5px 10px;                              /* Add padding around each navigation item */
+            border-right: 1px solid #999;                   /* Add vertical line between items */
+            flex-grow: 1;                                   /* Equal spacing for all items */
+        }
+            nav ul li:last-child {
+                border-right: none;                         /* Remove border for last item */
+            }
+            nav ul li a {
+                color: white;                               /* Set text color for navigation links */
+                text-decoration: none;                      /* Remove underline from navigation links */
+            }
+            nav ul li:hover {
+                background-color: #555;                     /* Change background on hover */
+            }
+
+.navbar {
+    background-color: #222;                                 /* Set background color for navbar */
+    color: #fff;                                            /* Set text color for navbar */
+    display: flex;                                          /* Use flexbox for layout */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
+    justify-content: space-between;                         /* Align items to the sides */
+    align-items: center;                                    /* Align items vertically */
+    padding: 10px 20px;                                     /* Add padding to navbar */
+    position: sticky;                                       /* Make navbar sticky */
+    top: 0;                                                 /* Stick it to the top of the viewport */
+    z-index: 10;
+}
+
+/* Progress Bar Properties */
+.progress-container {
+    width: 100%;                                            /* Set width for progress container */
+    background-color: #f1f1f1;                              /* Set background color for progress container to white */
+    position: sticky;                                       /* Make progress container sticky */
+    top: 50px;                                              /* Stick it to the top of the viewport */
+    z-index: 10;
+}
+.progress-bar {
+    height: 5px;                                            /* Set height for progress bar */
+    width: 0;                                               /* Initial width for progress bar */
+    background-color: #4caf50;                              /* Set background color for progress bar to green */
+    margin-top: 0;                                          /* Remove top margin for progress bar */
+    position: sticky;                                       /* Make progress bar sticky */
+    top: 50px;                                              /* Stick it to the top of the viewport */
+    z-index: 10;
+}
+
+/* Menu icon */
+.menu-icon {
+    position: absolute;
+    top: 7.5px;
+    right: 14px;
+    font-size: 24px;                                        /*Set font size for menu icon */
+    cursor: pointer;                                        /*Set cursor to pointer for interaction */
+    z-index: 10;
+}
+    .menu-icon:hover {
+        background-color: #555;                             /*Change background on hover */
+    }
+
+/* Dropdown list container */
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+}
+
+/* Dropdown list styling */
+.dropdown {                                                 /* .dropdown = .menu from My First Website */
+    position: absolute;                                     /* Position menu absolute */
+    top: 55px;                                              /* Align menu from top */
+    right: 0;                                               /* Align menu from right */
+    height: auto;                                           /* Set height to auto */
+    background-color: #f9f9f9;                              /* Set background color for menu */
+    padding: 0;                                             /* Add padding for menu items */
+    list-style-type: none;                                  /* Remove default list style for menu */
+    display: none;                                          /* Initially hide the menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
+    flex-direction: column;                                 /* Align items in a column */
+    align-items: stretch;                                   /* Stretch items vertically */
+    width: 25%;                                             /* Set width for the menu */
+    border: 1px solid #ccc;                                 /* Add border for the sub-list */
+    z-index: 10;                                            /* Set z-index for stacking order */
+}
+    /* Dropdown list items */
+    .dropdown li {
+        padding: 10px;                                      /* Add padding for menu items */
+        position: relative;
+        text-align: left;                                   /* Align text to left */
+        border-right: 1px solid #ccc;                       /* Add border between items */
+        border-bottom: 1px solid #ccc;                      /* Add border between items */
+    }
+    .dropdown li:last-child {
+        border-right: 1px solid #ccc;                       /* Remove right border for the last item */
+    }
+        .dropdown a {
+            color: black;                                   /* Set text color for menu links */
+            text-decoration: none;                          /* Remove underline from menu links */
+            padding: 10px;                                  /* Add padding for better clickability */
+            width: 100%;                                    /* Set full width for clickable area */
+            display: block;                                 /* Make it block to take full width */
+        }
+
+.main-content {
+    /*padding: 10px;*/                                          /* Adds space inside the main content area */
+    height: 100vh;                                          /* Ensures that the main class fills the whole screen */
+    width: 100vw;                                           /* Ensures that the main class fills the whole screen */
+    display: flex;                                          /* Allows a flexible box to fill the parent container's alotted space */
+    flex-direction: column;                                 /* Box is designated to fill or flex vertically */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100vh;                                          /* Make the container fill the viewport height */
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+/* Color changes in order from smallest screen width on laptop to largest screen width on laptop: lightgreen, lightsalmon, lightyellow, lightpink, lightblue */
+
+/* === Phone Portrait (Galaxy S23+ portrait) === */
+@media (max-width: 600px) and (orientation: portrait) {                                 /* From lightgreen to lightsalmon after about 479+119 px */     /* lightgreen has min width of about 399+99 px (the min width allowed for web browser window */
+
+}
+
+/* === Phone Landscape === */
+@media (max-width: 900px) and (orientation: landscape) {                                /* From lightyellow to lightpink after about 719+179 px */      /* lightyellow has a min width of  about 556+138 px */
+    
+}
+
+/* === Laptop - Quarter Screen Width (estimated <800px) === */
+@media (min-width: 601px) and (max-width: 900px) and (orientation: portrait) {          /* From lightsalmon to lightyellow after about 554+138 px */        /* lightsalmon has a min width of about 481+119 px */
+    
+}
+
+/* === Laptop Half-Screen Width (901px - 1400px) === */
+@media (min-width: 901px) and (max-width: 1400px) {                                     /* From lightpink to lightblue after about 1119+279 px */       /* lightpink has a min widht of about 721+179 px */
+    
+}
+
+/* === Laptop Full-Screen Width (>1400px) === */
+@media (min-width: 1401px) {                                                            /* lightblue has a min width of about 1121+279 px */
+    
+}
