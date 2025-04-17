@@ -4,7 +4,6 @@
 
 /* Reset some basic styles */
 html, body {
-    overflow-x: hidden;
     background-color: #dbdbdb;                              /* Sets a light gray background */
     color: #333;                                            /* Sets a dark gray text color for readability */
     font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
