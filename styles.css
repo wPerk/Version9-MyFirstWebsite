@@ -162,30 +162,3 @@ nav {
 .underline {
     text-decoration-line: underline;
 }
-
-/* Color changes in order from smallest screen width on laptop to largest screen width on laptop: lightgreen, lightsalmon, lightyellow, lightpink, lightblue */
-
-/* === Phone Portrait (Galaxy S23+ portrait) === */
-@media (max-width: 600px) and (orientation: portrait) {                                 /* From lightgreen to lightsalmon after about 479+119 px */     /* lightgreen has min width of about 399+99 px (the min width allowed for web browser window */
-
-}
-
-/* === Phone Landscape === */
-@media (max-width: 900px) and (orientation: landscape) {                                /* From lightyellow to lightpink after about 719+179 px */      /* lightyellow has a min width of  about 556+138 px */
-    
-}
-
-/* === Laptop - Quarter Screen Width (estimated <800px) === */
-@media (min-width: 601px) and (max-width: 900px) and (orientation: portrait) {          /* From lightsalmon to lightyellow after about 554+138 px */        /* lightsalmon has a min width of about 481+119 px */
-    
-}
-
-/* === Laptop Half-Screen Width (901px - 1400px) === */
-@media (min-width: 901px) and (max-width: 1400px) {                                     /* From lightpink to lightblue after about 1119+279 px */       /* lightpink has a min widht of about 721+179 px */
-    
-}
-
-/* === Laptop Full-Screen Width (>1400px) === */
-@media (min-width: 1401px) {                                                            /* lightblue has a min width of about 1121+279 px */
-    
-}
