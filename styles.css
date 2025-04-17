@@ -162,3 +162,8 @@ nav {
 .underline {
     text-decoration-line: underline;
 }
+
+#size-display-content {
+    font-weight: bold;
+    color: blue;
+}
