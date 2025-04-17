@@ -1,5 +1,10 @@
+* {
+    outline: 1px solid red;
+}
+
 /* Reset some basic styles */
 html, body {
+    overflow-x: hidden;
     background-color: #dbdbdb;                              /* Sets a light gray background */
     color: #333;                                            /* Sets a dark gray text color for readability */
     font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
@@ -124,6 +129,13 @@ nav {
     width: 25%;                                             /* Set width for the menu */
     border: 1px solid #ccc;                                 /* Add border for the sub-list */
     z-index: 10;                                            /* Set z-index for stacking order */
+}
+@media (max-width: 600px) {
+    .dropdown {
+        width: 100vw;
+        right: 0;
+        left: 0;
+    }
 }
     /* Dropdown list items */
     .dropdown li {
