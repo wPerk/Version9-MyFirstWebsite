@@ -57,7 +57,7 @@ nav {
     background-color: #222;                                 /* Set background color for navbar */
     color: #fff;                                            /* Set text color for navbar */
     display: flex;                                          /* Use flexbox for layout */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
     justify-content: space-between;                         /* Align items to the sides */
     align-items: center;                                    /* Align items vertically */
     padding: 10px 20px;                                     /* Add padding to navbar */
@@ -146,14 +146,14 @@ nav {
 .main-content {
     /*padding: 10px;*/                                          /* Adds space inside the main content area */
     height: 100vh;                                          /* Ensures that the main class fills the whole screen */
-    width: 100vw;                                           /* Ensures that the main class fills the whole screen */
+    width: 100%;                                           /* Ensures that the main class fills the whole screen */
     display: flex;                                          /* Allows a flexible box to fill the parent container's alotted space */
     flex-direction: column;                                 /* Box is designated to fill or flex vertically */
 }
 
 .content-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
     height: 100vh;                                          /* Make the container fill the viewport height */
