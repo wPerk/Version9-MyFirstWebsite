@@ -14,6 +14,19 @@ function updateProgressBar() {                                                  
     progressBar.style.width = scrolled + "%";                                                                   // Update the width of the progress bar
 }
 
+function updateContainerSizes() {
+    const contentContainer = document.querySelector(".content-container");
+
+    // Get current dimensions
+    const contentRect = contentContainer.getBoundingClientRect();
+
+    // Format as "width x height"
+    const contentSizeText = `${Math.round(contentRect.width)}px x ${Math.round(contentRect.height)}px`;
+
+    // Display values inside the containers (or in a separate element)
+    document.getElementById("size-display-content").textContent = contentSizeText;
+}
+
 // Event listener for the menu icon click
 menuIcon.addEventListener('click', function (event) {
     toggleDropdown();
@@ -37,3 +50,7 @@ window.onscroll = function () {
     }
     updateProgressBar();
 };
+
+// Run on page load and when the window resizes
+window.addEventListener("load", updateContainerSizes);
+window.addEventListener("resize", updateContainerSizes);
