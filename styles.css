@@ -1,9 +1,3 @@
-/* === Global === */
-/* * { */
-    /* Visual? */
-    /* outline: 0.0625rem solid red; */
-/* } */
-
 html, body {
     /* Box Model */
     margin: 0;                                              /* Removes default padding around the page */
@@ -405,28 +399,3 @@ nav {
         background-color: lightblue;
     }
 }
-
-/*--------------------------------------------------------------------------*/
-
-/*
-
-LOGICAL GROUPING
-Group related properties together by purpose:
-
-    1. Positioning: position, top, left, z-index
-
-    2. Box Model: margin, padding, width, height, border
-
-    3. Flex/Grid Layout: display, flex-*, grid-*, justify-content, align-items
-
-    4. Typography: font-*, color, line-height, text-align
-
-    5. Visual: background, box-shadow, border-radius
-
-    6. Interaction: transition, cursor, hover styles
-
-This makes it easy to scan the styles and find things fast.
-
-*/
-
-/*--------------------------------------------------------------------------*/
