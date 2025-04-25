@@ -2,6 +2,10 @@ const menuIcon = document.querySelector('.menu-icon');
 const dropdown = document.querySelector('.dropdown');
 const progressBar = document.getElementById('myProgressBar');
 
+function goHome() {
+    window.location.href = "home.html"; // Redirect to home page
+}
+
 // Function to toggle the visibility of the dropdown
 function toggleDropdown() {
     dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
@@ -41,14 +45,11 @@ document.addEventListener('click', function (event) {
 });
 
 window.onscroll = function () {
-    console.log('Scroll event triggered'); // Check if this logs
-    const progressBar = document.getElementById('myProgressBar');
     if (progressBar) {
         updateProgressBar();
     } else {
-        console.error('Progress bar not found on this page.');
+        console.error("Progress bar with ID 'myProgressBar' not found on this page.");
     }
-    updateProgressBar();
 };
 
 // Run on page load and when the window resizes
