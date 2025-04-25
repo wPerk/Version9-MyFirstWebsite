@@ -1,191 +1,375 @@
-* {
-    outline: 1px solid red;
-}
+/* === Global === */
+/* * { */
+    /* Visual? */
+    /* outline: 0.0625rem solid red; */
+/* } */
 
-/* Reset some basic styles */
 html, body {
-    background-color: #dbdbdb;                              /* Sets a light gray background */
-    color: #333;                                            /* Sets a dark gray text color for readability */
-    font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
-    padding: 0;                                             /* Removes default padding around the page */
+    /* Box Model */
     margin: 0;                                              /* Removes default padding around the page */
-    height: 100%;
+    padding: 0;                                             /* Removes default padding around the page */
+
+    /* Typography */
+    font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
+    color: #333;                                            /* Sets a dark gray text color for readability */
+    
+    /* Visual */
+    background-color: #dbdbdb;                              /* Sets a light gray background */
 }
 
+/* === Header === */
 header {
-    background-color: #444;                                 /* Sets a gray background for the header */
-    color: white;                                           /* Makes the text color white for contrast */
-    text-align: center;                                     /* Centers the header content */
-    padding: 30px 20px;                                     /* Adds spacing inside the header */
-    font-size: 24px;                                        /* Increases font size for better visibility */
-}
-
-footer {
-    background-color: #444;                                 /* Sets a dark background color for the footer */
-    color: white;                                           /* Makes the footer text white */
-    text-align: center;                                     /* Centers the text in the footer */
-    padding: 5px 0;                                         /* Adds vertical padding inside the footer */
-    margin-top: 20px;                                       /* Adds space above the footer */
-    position: relative;                                     /* Place the footer in its position relative to its "normal flow" position */
-}
-
-/* Navbar Properties */
-nav {
-    background-color: #444;                                 /* Set background color for navigation */
-    padding: 10px;                                          /* Add padding to navigation */
+    /* Positioning */
     z-index: 10;
+
+    /* Box Model */
+    padding: 1.875rem 1.25rem;                              /* Adds spacing inside the header */
+    
+    /* Typography */
+    font-size: 1.5rem;                                      /* Increases font size for better visibility */
+    text-align: center;                                     /* Centers the header content */
+    color: white;                                           /* Makes the text color white for contrast */
+
+    /* Visual */
+    background-color: #444;                                 /* Sets a gray background for the header */
+}
+
+/* === Home Button === */
+.home-button {
+    /* Positioning */
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+
+    /* Typography */
+    font-size: 1.875rem;
+    color: #4caf50;
+
+    /* Interaction */
+    cursor: pointer;
+}
+
+    .home-button:hover {
+        /* Typography */
+        color: #45a049;                                     /* Change color on hover */
+    }
+
+    .home-button i {
+        /* Typography */
+        font-size: 1.25rem;
+    }
+
+/* === Footer === */
+footer {
+    /* Positioning */
+    position: relative;                                     /* Place the footer in its position relative to its "normal flow" position */
+
+    /* Box Model */
+    margin-top: 0;                                          /* Adds space above the footer */
+    padding: 0.3125rem 0;                                   /* Adds vertical padding inside the footer */
+
+    /* Typography */
+    text-align: center;                                     /* Centers the text in the footer */
+    color: white;                                           /* Makes the footer text white */
+
+    /* Visual */
+    background-color: #444;                                 /* Sets a dark background color for the footer */
+}
+
+/* === Navigation Menu === */
+nav {
+    /* Positioning */
+    z-index: 1000;
+
+    /* Box Model */
+    padding: 0.625rem;                                      /* Add padding to navigation */
+
+    /* Visual */
+    background-color: #444;                                 /* Set background color for navigation */
 }
     nav ul {
-        list-style-type: none;                              /* Remove default list style for navigation ul */
-        margin: 0;                                          /* Remove default margin */
-        padding: 0;                                         /* Remove default padding */
+        /* Layout */
         display: flex;                                      /* Use flexbox for the navbar */
         justify-content: space-between;                     /* Align items to the sides */
+
+        /* Box Model */
+        margin: 0;                                          /* Remove default margin */
+        padding: 0;                                         /* Remove default padding */
+
+        /* List Style */
+        list-style-type: none;                              /* Remove default list style for navigation ul */
     }
         nav ul li {
-            padding: 5px 10px;                              /* Add padding around each navigation item */
-            border-right: 1px solid #999;                   /* Add vertical line between items */
+            /* Layout */
             flex-grow: 1;                                   /* Equal spacing for all items */
+            
+            /* Box Model */
+            padding: 0.3125rem 0.625rem;                    /* Add padding around each navigation item */
+            border-right: 0.0625rem solid #999;             /* Add vertical line between items */
         }
             nav ul li:last-child {
+                /* Box Model */
                 border-right: none;                         /* Remove border for last item */
             }
             nav ul li a {
+                /* Typography */
                 color: white;                               /* Set text color for navigation links */
                 text-decoration: none;                      /* Remove underline from navigation links */
             }
             nav ul li:hover {
+                /* Visual */
                 background-color: #555;                     /* Change background on hover */
             }
 
+/* === Navigation Bar === */
 .navbar {
-    background-color: #222;                                 /* Set background color for navbar */
-    color: #fff;                                            /* Set text color for navbar */
-    display: flex;                                          /* Use flexbox for layout */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
-    justify-content: space-between;                         /* Align items to the sides */
-    align-items: center;                                    /* Align items vertically */
-    padding: 10px 20px;                                     /* Add padding to navbar */
+    /* Positioning */
     position: sticky;                                       /* Make navbar sticky */
     top: 0;                                                 /* Stick it to the top of the viewport */
-    z-index: 10;
+    z-index: 1000;
+
+    /* Layout */
+    display: flex;                                          /* Use flexbox for layout */
+    justify-content: space-between;                         /* Align items to the sides */
+    align-items: center;                                    /* Align items vertically */    
+
+    /* Box Model */
+    padding: 0.625rem 1.25rem;                              /* Add padding to navbar */
+
+    /* Typography */
+    color: #fff;                                            /* Set text color for navbar */
+
+    /* Visual */
+    background-color: #222;                                 /* Set background color for navbar */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);            /* Optional: Add shadow for the menu */
 }
 
-/* Progress Bar Properties */
+/* === Progress Container === */
 .progress-container {
-    width: 100%;                                            /* Set width for progress container */
-    background-color: #f1f1f1;                              /* Set background color for progress container to white */
+    /* Positioning */
     position: sticky;                                       /* Make progress container sticky */
-    top: 50px;                                              /* Stick it to the top of the viewport */
-    z-index: 10;
+    top: 3.125rem;                                          /* Stick it to the top of the viewport */
+    z-index: 999;
+
+    /* Box Model */
+    width: 100%;                                            /* Set width for progress container */
+
+    /* Visual */
+    background-color: #f1f1f1;                              /* Set background color for progress container to white */
 }
+/* === Progress Bar === */
 .progress-bar {
-    height: 5px;                                            /* Set height for progress bar */
+    /* Positioning */
+    top: 3.125rem;                                          /* Stick it to the top of the viewport */
+    z-index: 999;
+
+    /* Box Model */
     width: 0;                                               /* Initial width for progress bar */
-    background-color: #4caf50;                              /* Set background color for progress bar to green */
+    height: 0.3125rem;                                      /* Set height for progress bar */
     margin-top: 0;                                          /* Remove top margin for progress bar */
-    position: sticky;                                       /* Make progress bar sticky */
-    top: 50px;                                              /* Stick it to the top of the viewport */
-    z-index: 10;
+
+    /* Visual */
+    background-color: #4caf50;                              /* Set background color for progress bar to green */
 }
 
-/* Menu icon */
+/* === Menu Icon === */
 .menu-icon {
+    /* Positioning */
     position: absolute;
-    top: 7.5px;
-    right: 14px;
-    font-size: 24px;                                        /*Set font size for menu icon */
-    cursor: pointer;                                        /*Set cursor to pointer for interaction */
+    top: 0.4688rem;
+    right: 0.875rem;
     z-index: 10;
+
+    /* Typography */
+    font-size: 1.5rem;                                      /*Set font size for menu icon */
+
+    /* Interaction */
+    cursor: pointer;                                        /*Set cursor to pointer for interaction */
 }
     .menu-icon:hover {
+        /* Visual */
         background-color: #555;                             /*Change background on hover */
     }
 
-/* Dropdown list container */
+/* === Dropdown Menu === */
 .menu-list {
+    /* Layout */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #222;
+
+    /* Box Model */
+    padding: 0.625rem;
+
+    /* Typography */
     color: white;
+
+    /* Visual */
+    background-color: #222;
 }
 
-/* Dropdown list styling */
+/* === Dropdown List  === */
 .dropdown {                                                 /* .dropdown = .menu from My First Website */
+    /* Positioning */
     position: absolute;                                     /* Position menu absolute */
-    top: 55px;                                              /* Align menu from top */
+    top: 3.4375rem;                                         /* Align menu from top */
     right: 0;                                               /* Align menu from right */
-    height: auto;                                           /* Set height to auto */
-    background-color: #f9f9f9;                              /* Set background color for menu */
-    padding: 0;                                             /* Add padding for menu items */
-    list-style-type: none;                                  /* Remove default list style for menu */
+    z-index: 10;                                            /* Set z-index for stacking order */
+
+    /* Layout */
     display: none;                                          /* Initially hide the menu */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* Optional: Add shadow for the menu */
     flex-direction: column;                                 /* Align items in a column */
     align-items: stretch;                                   /* Stretch items vertically */
+
+    /* Box Model */
+    padding: 0;                                             /* Add padding for menu items */
     width: 25%;                                             /* Set width for the menu */
-    border: 1px solid #ccc;                                 /* Add border for the sub-list */
-    z-index: 10;                                            /* Set z-index for stacking order */
+    height: auto;                                           /* Set height to auto */
+    list-style-type: none;                                  /* Remove default list style for menu */
+    border: 0.0625rem solid #ccc;                           /* Add border for the sub-list */
+
+    /* Visual */
+    background-color: #f9f9f9;                              /* Set background color for menu */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);            /* Optional: Add shadow for the menu */
 }
 @media (max-width: 600px) {
     .dropdown {
-        width: 100vw;
+        /* Positioning */
         right: 0;
         left: 0;
+
+        /* Box Model */
+        width: 100vw;
+
     }
 }
-    /* Dropdown list items */
+    /* === Dropdown Items === */
     .dropdown li {
-        padding: 10px;                                      /* Add padding for menu items */
+        /* Positioning */
         position: relative;
+
+        /* Box Model */
+        padding: 0.625rem;                                  /* Add padding for menu items */
+        border-right: 0.0625rem solid #ccc;                 /* Add border between items */
+        border-bottom: 0.0625rem solid #ccc;                /* Add border between items */
+
+        /* Typography */
         text-align: left;                                   /* Align text to left */
-        border-right: 1px solid #ccc;                       /* Add border between items */
-        border-bottom: 1px solid #ccc;                      /* Add border between items */
     }
     .dropdown li:last-child {
-        border-right: 1px solid #ccc;                       /* Remove right border for the last item */
+        /* Box Model */
+        border-right: 0.0625rem solid #ccc;                 /* Remove right border for the last item */
     }
         .dropdown a {
+            /* Box Model */
+            padding: 0.625rem;                              /* Add padding for better clickability */
+            width: 100%;                                    /* Set full width for clickable area */
+
+            /* Typography */
             color: black;                                   /* Set text color for menu links */
             text-decoration: none;                          /* Remove underline from menu links */
-            padding: 10px;                                  /* Add padding for better clickability */
-            width: 100%;                                    /* Set full width for clickable area */
+
+            /* Layout */
             display: block;                                 /* Make it block to take full width */
         }
 
+/* === Main Content === */
 .main-content {
-    /*padding: 10px;*/                                          /* Adds space inside the main content area */
-    min-height: 100%;                                          /* Ensures that the main class fills the whole screen */
-    width: 100%;                                           /* Ensures that the main class fills the whole screen */
+    /* Layout */
     display: flex;                                          /* Allows a flexible box to fill the parent container's alotted space */
     flex-direction: column;                                 /* Box is designated to fill or flex vertically */
+
+    /* Box Model */
+    width: 100%;                                            /* Ensures that the main class fills the whole screen */
+    min-height: 100%;                                       /* Ensures that the main class fills the whole screen */
 }
 
+/* === Content Container === */
 .content-container {
+    /* Layout */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+
+    /* Box Model */
     width: 100%;
-    min-height: 100%;                                          /* Make the container fill the viewport height */
+    min-height: 100%;                                       /* Make the container fill the viewport height */
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        /* Box Model */
+        width: 100%;
+        min-height: 100%;                                   /* Make the container fill the viewport height */
+
+        /* Layout */
+        align-items: flex-start;
+    }
 }
 
 .underline {
+    /* Typography */
     text-decoration-line: underline;
 }
 
+.row {
+    /* Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* optional: for vertical centering */
+}
+
+.label {
+    /* Box Model */
+    padding: 0.3125rem;
+}
+
+.dimensions {
+    /* Box Model */
+    padding: 0.3125rem;
+}
+
 #size-display-content {
+    /* Typography */
     font-weight: bold;
     color: blue;
 }
 
+.divider {
+    /* Box Model */
+    margin: 0.625rem 0.625rem;                              /* Add space above and below */
+    width: 90%;
+    height: 0.0625rem;
+
+    /* Layout */
+    align-content: center;
+
+    /* Visual */
+    background-color: black;                                /* Thin black line */
+}
+
+.wedge {
+    /* Box Model */
+    /*width: 3.125rem;*/
+    width: 50vw;                                             /* 5% of the viewport width */
+    min-width: 10rem;
+    max-width: 50rem;
+
+    /* Layout */
+    display: inline-block;
+}
 
 /* Color changes in order from smallest screen width on laptop to largest screen width on laptop: lightgreen, lightsalmon, lightyellow, lightpink, lightblue */
 
 /* === Phone Portrait (Galaxy S23+ portrait) === */
 @media (max-width: 600px) and (orientation: portrait) {                                 /* From lightgreen to lightsalmon after about 479+119 px */     /* lightgreen has min width of about 399+99 px (the min width allowed for web browser window */
     .content-container {
+        /* Visual */
         background-color: lightgreen;
     }
 }
@@ -193,6 +377,7 @@ nav {
 /* === Phone Landscape === */
 @media (max-width: 900px) and (orientation: landscape) {                                /* From lightyellow to lightpink after about 719+179 px */      /* lightyellow has a min width of  about 556+138 px */
     .content-container {
+        /* Visual */
         background-color: lightyellow;
     }
 }
@@ -200,6 +385,7 @@ nav {
 /* === Laptop - Quarter Screen Width (estimated <800px) === */
 @media (min-width: 601px) and (max-width: 900px) and (orientation: portrait) {          /* From lightsalmon to lightyellow after about 554+138 px */        /* lightsalmon has a min width of about 481+119 px */
     .content-container {
+        /* Visual */
         background-color: lightsalmon;
     }
 }
@@ -207,6 +393,7 @@ nav {
 /* === Laptop Half-Screen Width (901px - 1400px) === */
 @media (min-width: 901px) and (max-width: 1400px) {                                     /* From lightpink to lightblue after about 1119+279 px */       /* lightpink has a min widht of about 721+179 px */
     .content-container {
+        /* Visual */
         background-color: lightpink;
     }
 }
@@ -214,6 +401,32 @@ nav {
 /* === Laptop Full-Screen Width (>1400px) === */
 @media (min-width: 1401px) {                                                            /* lightblue has a min width of about 1121+279 px */
     .content-container {
+        /* Visual */
         background-color: lightblue;
     }
 }
+
+/*--------------------------------------------------------------------------*/
+
+/*
+
+LOGICAL GROUPING
+Group related properties together by purpose:
+
+    1. Positioning: position, top, left, z-index
+
+    2. Box Model: margin, padding, width, height, border
+
+    3. Flex/Grid Layout: display, flex-*, grid-*, justify-content, align-items
+
+    4. Typography: font-*, color, line-height, text-align
+
+    5. Visual: background, box-shadow, border-radius
+
+    6. Interaction: transition, cursor, hover styles
+
+This makes it easy to scan the styles and find things fast.
+
+*/
+
+/*--------------------------------------------------------------------------*/
