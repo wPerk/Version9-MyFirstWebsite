@@ -1,42 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wade's Website (v9)</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>    <h1>Welcome to My Website</h1>      </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Garbage</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>    <h1>GARBAGE | Welcome to My Website</h1>    </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="page1.html">Page 1</a></li>
-            <li><a href="page2.html">Page 2</a></li>
-            <li><a href="page3.html">Page 3</a></li>
-        </ul>
-        <div>
-            <label class="menu-icon" id="menu-icon">&#9776;</label>
-            <div class="menu-list">
-                <ul class="dropdown" id="dropdown">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="page1.html">Page 1</a></li>
-                    <li><a href="page2.html">Page 2</a></li>
-                    <li><a href="page3.html">Page 3</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <i class="fas fa-home home-button" onclick="goHome()"></i>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myProgressBar"></div>
-    </div>
-
-    <main class="main-content">
-        <!--<header>    <h1>Welcome to My Website</h1>      </header>-->
-
-        <!--<nav class="navbar">
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Index</a></li>
                 <li><a href="page1.html">Page 1</a></li>
@@ -44,73 +20,64 @@
                 <li><a href="page3.html">Page 3</a></li>
             </ul>
             <div>
-                <label class="menu-icon" id="menu-icon">&#9776;</label>
+                <label class="menu-icon">&#9776;</label>
                 <div class="menu-list">
-                    <ul class="dropdown" id="dropdown">
+                    <ul class="dropdown">
                         <li><a href="index.html">Index</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="page1.html">Page 1</a></li>
                         <li><a href="page2.html">Page 2</a></li>
                         <li><a href="page3.html">Page 3</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>-->
+        </nav>
 
-        <!--<div class="progress-container">
+        <div class="progress-container">
             <div class="progress-bar" id="myProgressBar"></div>
-        </div>-->
-
-        <div class="content-container">
-            <p><u class="underline"><b>Content Column Content</b></u></p>
-            <p>Content Container Size: <span id="size-display-content">Loading...</span></p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <!--The last 14 lines are not covered with the content container's background color-->
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-            <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
-
-            <footer>
-                <p>&copy; 2025 My First Website</p>                                                                 <!-- Displays copyright information -->
-            </footer>
         </div>
 
-        <!--<footer>
-            <p>&copy; 2025 My First Website</p>-->                                                                 <!-- Displays copyright information -->
-        <!--</footer>-->
-    </main>
-        
-    <script src="script.js"></script>
-</body>
+        <main class="main-content">
+            <div class="content-container">
+                <!--<p><u class="underline"><b>Content Container</b></u> <span class="wedge"></span> <wbr /> Current Dimensions: <span id="size-display-content">Loading...</span></p>-->
+                <div class="row">
+                    <div class="label"><u class="underline"><b>Content Container</b></u></div>
+                    <div class="dimensions">Current Dimensions: <span id="size-display-content">Loading...</span></div>
+                </div>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+                <p>Here are some words to fill the space. Here are some words to fill the space. Here are some words to fill the space.</p>
+            </div>
+        </main>
+
+        <footer>    <p>&copy; 2025 Wade. All rights reserved.</p>    </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
