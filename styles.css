@@ -34,6 +34,7 @@ header {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
+    z-index: 20;
 
     /* Typography */
     font-size: 1.875rem;
