@@ -34,7 +34,6 @@ header {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-    z-index: 20;
 
     /* Typography */
     font-size: 1.875rem;
@@ -307,6 +306,39 @@ nav {
     }
 }
 
+    .container-1 {
+        /* Layout */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        /* Box Model */
+        width: 100%;
+        min-height: 100%;                                   /* Make the container fill the viewport height */
+
+        /* Layout */
+        align-items: flex-start;
+    }
+
+.personal-layout {
+    /* Box Model */
+    width: 100%;
+    min-height: 100%;
+    /*margin-top: 0.625rem;*/
+    box-sizing: border-box;
+
+    /* Visual */
+    /*background-color: rgba(0, 0, 255, 0.1);*/                /* Blue */
+    /*background: #dbdbdb;*/
+
+    /* Interaction */
+    /*clear: both;*/
+}
+
+.contact-info {
+    margin-left: 1.25rem;                                   /* Indent the contact information */
+}
+
 .underline {
     /* Typography */
     text-decoration-line: underline;
@@ -316,7 +348,7 @@ nav {
     /* Layout */
     display: flex;
     justify-content: space-between;
-    align-items: center; /* optional: for vertical centering */
+    align-items: center;                                    /* optional: for vertical centering */
 }
 
 .label {
@@ -357,6 +389,101 @@ nav {
 
     /* Layout */
     display: inline-block;
+}
+
+/* === Columns === */
+.left-column {
+    width: 50%;                                              /* Set width for left column in two-column layout */
+    height: auto;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    background-color: rgba(255, 165, 0, 0.1);                /* Orange */
+}
+
+.right-column {
+    width: 50%;                                              /* Set width for right column in two-column layout */
+    height: auto;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    background-color: rgba(255, 0, 255, 0.1);                /* Magenta */
+}
+
+.narrow-left-column {
+    min-height: 18.75rem;
+    flex: 0 0 20%;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    /*background-color: rgba(0, 255, 0, 0.1);*/                  /* Green */
+}
+
+.wide-right-column {
+    min-height: 18.75rem;
+    flex: 0 0 80%;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    /*background-color: rgba(255, 0, 0, 0.1);*/                  /* Light red for visibility */
+}
+
+.project-category {
+    margin-bottom: 1.25rem;                                 /* Add margin at the bottom of each project category */
+}
+
+    .project-category h3 {
+        color: #333;                                        /* Set color for project category headings */
+        font-size: 1.25rem;                                 /* Set font size for project category headings */
+    }
+
+    .project-category ul {
+        list-style-type: none;                              /* Remove default list style for project category ul */
+        margin: 0;                                          /* Remove default margin */
+        padding: 0;                                         /* Remove default padding */
+    }
+
+    .project-category li {
+        background-color: #f9f9f9;                          /* Set background color for project category list items */
+        padding: 0.625rem;                                  /* Add padding to project category list items */
+        margin-bottom: 0.625rem;                            /* Add margin at the bottom of project category list items */
+    }
+
+        .project-category li h4 {
+            margin-top: 0;                                  /* Remove top margin for h4 elements in project category */
+        }
+
+        .project-category li p {
+            margin: 0.3125rem 0;                                  /* Set margins for paragraphs in project category */
+        }
+
+        .project-category li ul {
+            margin-left: 1.25rem;                           /* Indent nested ul list in project category */
+        }
+
+            .project-category li ul li {
+                margin: 0.1875rem 0;                        /* Set margin for nested list items in project category */
+            }
+
+                .project-category li ul li a {
+                    color: #007bff;                         /* Set color for links in nested list items */
+                    text-decoration: none;                  /* Remove underline from links */
+                }
+
+                    .project-category li ul li a:hover {
+                        text-decoration: underline;         /* Underline links on hover */
+                    }
+
+.project-description {
+    display: flex;
+    align-items: baseline;
+    margin-left: 1.25rem;
+}
+
+.left-of-colon {
+    min-width: 0.625rem;                                        /* Adjust as needed */
+    text-align: left;
+}
+
+.after-colon {
+    flex: 1;
+    padding-left: 0.625rem;
 }
 
 /* Color changes in order from smallest screen width on laptop to largest screen width on laptop: lightgreen, lightsalmon, lightyellow, lightpink, lightblue */
