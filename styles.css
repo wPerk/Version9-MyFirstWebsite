@@ -410,7 +410,7 @@ nav {
 
 .narrow-left-column {
     min-height: 18.75rem;
-    flex: 0 0 20%;
+    
     padding: 0.625rem;
     box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
     /*background-color: rgba(0, 255, 0, 0.1);*/                  /* Green */
@@ -418,7 +418,7 @@ nav {
 
 .wide-right-column {
     min-height: 18.75rem;
-    flex: 0 0 80%;
+    
     padding: 0.625rem;
     box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
     /*background-color: rgba(255, 0, 0, 0.1);*/                  /* Light red for visibility */
