@@ -1,0 +1,28 @@
+.divider {
+    /* Box Model */
+    margin: 0.625rem 0.625rem;                              /* Add space above and below */
+    width: 90%;
+    height: 0.0625rem;
+
+    /* Layout */
+    align-content: center;
+
+    /* Visual */
+    background-color: black;                                /* Thin black line */
+}
+
+.narrow-left-column {
+    min-height: 18.75rem;
+    flex: 0 0 20%;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    /*background-color: rgba(0, 255, 0, 0.1);*/                  /* Green */
+}
+
+.wide-right-column {
+    min-height: 18.75rem;
+    flex: 0 0 80%;
+    padding: 0.625rem;
+    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+    /*background-color: rgba(255, 0, 0, 0.1);*/                  /* Light red for visibility */
+}
