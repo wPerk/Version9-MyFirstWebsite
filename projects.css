@@ -1,0 +1,61 @@
+.project-category {
+    margin-bottom: 1.25rem;                                 /* Add margin at the bottom of each project category */
+}
+
+    .project-category h3 {
+        color: #333;                                        /* Set color for project category headings */
+        font-size: 1.25rem;                                 /* Set font size for project category headings */
+    }
+
+    .project-category ul {
+        list-style-type: none;                              /* Remove default list style for project category ul */
+        margin: 0;                                          /* Remove default margin */
+        padding: 0;                                         /* Remove default padding */
+    }
+
+    .project-category li {
+        background-color: #f9f9f9;                          /* Set background color for project category list items */
+        padding: 0.625rem;                                  /* Add padding to project category list items */
+        margin-bottom: 0.625rem;                            /* Add margin at the bottom of project category list items */
+    }
+
+        .project-category li h4 {
+            margin-top: 0;                                  /* Remove top margin for h4 elements in project category */
+        }
+
+        .project-category li p {
+            margin: 0.3125rem 0;                            /* Set margins for paragraphs in project category */
+        }
+
+        .project-category li ul {
+            margin-left: 1.25rem;                           /* Indent nested ul list in project category */
+        }
+
+            .project-category li ul li {
+                margin: 0.1875rem 0;                        /* Set margin for nested list items in project category */
+            }
+
+                .project-category li ul li a {
+                    color: #007bff;                         /* Set color for links in nested list items */
+                    text-decoration: none;                  /* Remove underline from links */
+                }
+
+                    .project-category li ul li a:hover {
+                        text-decoration: underline;         /* Underline links on hover */
+                    }
+
+.project-description {
+    display: flex;
+    align-items: baseline;
+    margin-left: 1.25rem;
+}
+
+.left-of-colon {
+    min-width: 0.625rem;                                    /* Adjust as needed */
+    text-align: left;
+}
+
+.after-colon {
+    flex: 1;
+    padding-left: 0.625rem;
+}
