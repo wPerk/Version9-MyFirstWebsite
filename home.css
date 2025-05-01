@@ -1,22 +1,9 @@
-.divider {
-    /* Box Model */
-    margin: 0.625rem 0.625rem;                              /* Add space above and below */
-    width: 90%;
-    height: 0.0625rem;
-
-    /* Layout */
-    align-content: center;
-
-    /* Visual */
-    background-color: black;                                /* Thin black line */
-}
-
 .narrow-left-column {
     min-height: 18.75rem;
     flex: 0 0 20%;
     padding: 0.625rem;
     box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
-    /*background-color: rgba(0, 255, 0, 0.1);*/                  /* Green */
+    background-color: rgba(0, 255, 0, 0.1);                  /* Green */
 }
 
 .wide-right-column {
@@ -24,5 +11,108 @@
     flex: 0 0 80%;
     padding: 0.625rem;
     box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
-    /*background-color: rgba(255, 0, 0, 0.1);*/                  /* Light red for visibility */
+    background-color: rgba(255, 0, 0, 0.1);                  /* Light red for visibility */
+}
+@media (max-width: 600px) {
+    .wide-right-column {
+        min-height: 18.75rem;
+        flex: 0 0 80%;
+        padding: 0.625rem;
+        box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+        background-color: rgba(255, 0, 0, 0.1);                  /* Light red for visibility */
+    }
+}
+
+.name-role {
+    margin-top: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    font-size: 1.625rem;
+    font-family: Verdana;
+    flex: 1 1 70%;
+}
+
+.purpose {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    flex: 1 1 70%;
+}
+
+.overview {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 100%;
+}
+
+.personal-layout {
+    /* Box Model */
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.section1 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 0.3125rem;
+    gap: 1rem;
+    align-items: normal;
+    padding-right: 0.3125rem;
+}
+
+.section2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.text-block-1 {
+    flex: 1 1 0;
+    min-width: 250px;
+    word-wrap: break-word;
+    padding-right: 0.625rem;
+}
+
+.image-block {
+    flex: 0 0 auto; /* prevents resizing */
+    min-width: auto;
+    margin: 2.5rem 2.5rem 2.5rem 2.815rem;
+}
+
+    .image-block img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover; /* Keeps the image cropped if needed */
+        border-radius: 8px;
+    }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    .text-block-1 {
+        order: 1; /* appears first */
+        width: 100%;
+    }
+
+    .image-block {
+        order: 2; /* appears second */
+        width: 100%;
+    }
+}
+
+.divider {
+    /* Box Model */
+    margin: 0.625rem 1.25rem 0.625rem 1.25rem;                                   /* margin: top right bottom left */
+    flex: 1 1 60%;
+    height: 0.0625rem;
+
+    /* Layout */
+    align-content: center;
+
+    /* Visual */
+    background-color: black;                                /* Thin black line */
 }
