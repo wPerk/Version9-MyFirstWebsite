@@ -11,6 +11,10 @@ html, body {
     background-color: #dbdbdb;                              /* Sets a light gray background */
 }
 
+h2 {
+    margin-left: 1.25rem;
+}
+
 /* === Header === */
 header {
     /* Positioning */
@@ -289,54 +293,18 @@ nav {
     width: 100%;
     min-height: 100%;                                       /* Make the container fill the viewport height */
 }
-
 @media (max-width: 600px) {
     .content-container {
         /* Layout */
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-
         /* Box Model */
         width: 100%;
-        min-height: 100%;                                   /* Make the container fill the viewport height */
-
+        min-height: 100%; /* Make the container fill the viewport height */
         /* Layout */
         align-items: flex-start;
     }
-}
-
-    .container-1 {
-        /* Layout */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        /* Box Model */
-        width: 100%;
-        min-height: 100%;                                   /* Make the container fill the viewport height */
-
-        /* Layout */
-        align-items: flex-start;
-    }
-
-.personal-layout {
-    /* Box Model */
-    width: 100%;
-    min-height: 100%;
-    /*margin-top: 0.625rem;*/
-    
-
-    /* Visual */
-    /*background-color: rgba(0, 0, 255, 0.1);*/                /* Blue */
-    /*background: #dbdbdb;*/
-
-    /* Interaction */
-    /*clear: both;*/
-}
-
-.contact-info {
-    margin-left: 1.25rem;                                   /* Indent the contact information */
 }
 
 .underline {
