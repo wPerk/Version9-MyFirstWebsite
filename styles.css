@@ -12,7 +12,13 @@ html, body {
 }
 
 h2 {
-    margin-left: 1.25rem;
+    /* Box Model */
+    margin-left: 1.25rem; 1,}
+
+h3 {
+    /* Box Model */
+    margin: 0.3125rem;
+    padding: 0.0625rem;
 }
 
 /* === Header === */
@@ -278,6 +284,7 @@ nav {
     flex-direction: column;                                 /* Box is designated to fill or flex vertically */
 
     /* Box Model */
+    padding: 0.625rem;
     width: 100%;                                            /* Ensures that the main class fills the whole screen */
     min-height: 100%;                                       /* Ensures that the main class fills the whole screen */
 }
@@ -299,9 +306,11 @@ nav {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+
         /* Box Model */
         width: 100%;
-        min-height: 100%; /* Make the container fill the viewport height */
+        min-height: 100%;                                   /* Make the container fill the viewport height */
+        
         /* Layout */
         align-items: flex-start;
     }
@@ -337,7 +346,6 @@ nav {
 
 .wedge {
     /* Box Model */
-    /*width: 3.125rem;*/
     width: 50vw;                                             /* 5% of the viewport width */
     min-width: 10rem;
     max-width: 50rem;
