@@ -1,3 +1,5 @@
+/* Color changes in order from smallest screen width on laptop to largest screen width on laptop: lightgreen, lightsalmon, lightyellow, lightpink, lightblue */
+
 /* === Phone Portrait (Galaxy S23+ portrait) === */
 @media (max-width: 600px) and (orientation: portrait) {                                 /* From lightgreen to lightsalmon after about 479+119 px */     /* lightgreen has min width of about 399+99 px (the min width allowed for web browser window */
     .content-container {
