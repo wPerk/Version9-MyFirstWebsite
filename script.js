@@ -1,9 +1,13 @@
 const menuIcon = document.querySelector('.menu-icon');
 const dropdown = document.querySelector('.dropdown');
 const progressBar = document.getElementById('myProgressBar');
+const toggleBtns = document.querySelectorAll('.toggle-btn');
+const collapsibles = document.querySelectorAll('.collapsible');
+const collapseAllBtn = document.getElementById('collapse-btn');
+var counter = 0;
 
 function goHome() {
-    window.location.href = "home.html"; // Redirect to home page
+    window.location.href = "home.html";                                                                         // Redirect to home page
 }
 
 // Function to toggle the visibility of the dropdown
@@ -20,29 +24,56 @@ function updateProgressBar() {                                                  
 
 function updateContainerSizes() {
     const contentContainer = document.querySelector(".content-container");
+    const contentRect = contentContainer.getBoundingClientRect();                                               // Get current dimensions
+    const contentSizeText = `${Math.round(contentRect.width)}px x ${Math.round(contentRect.height)}px`;         // Format as "width x height"
 
-    // Get current dimensions
-    const contentRect = contentContainer.getBoundingClientRect();
-
-    // Format as "width x height"
-    const contentSizeText = `${Math.round(contentRect.width)}px x ${Math.round(contentRect.height)}px`;
-
-    // Display values inside the containers (or in a separate element)
-    document.getElementById("size-display-content").textContent = contentSizeText;
+    document.getElementById("size-display-content").textContent = contentSizeText;                              // Display values inside the containers (or in a separate element)
 }
 
 // Event listener for the menu icon click
 menuIcon.addEventListener('click', function (event) {
     toggleDropdown();
-    event.stopPropagation(); // Prevent the event from propagating to the document
+    event.stopPropagation();                                                                                    // Prevent the event from propagating to the document
 });
 
 // Event listener for clicking anywhere on the document to close the dropdown
 document.addEventListener('click', function (event) {
     if (!dropdown.contains(event.target) && event.target !== menuIcon) {
-        dropdown.style.display = 'none'; // Close the dropdown if clicked outside
+        dropdown.style.display = 'none';                                                                        // Close the dropdown if clicked outside
     }
 });
+
+toggleBtns.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const collapsible = collapsibles[index];
+
+        if (collapsible.style.maxHeight && collapsible.style.maxHeight !== "0px") {
+            collapsible.style.maxHeight = "0px";                                                                // Collapse
+        } else {
+            collapsible.style.maxHeight = collapsible.scrollHeight + "px";                                      // Expand
+        }
+    });
+});
+
+if (collapseAllBtn) {
+    collapseAllBtn.addEventListener('click', () => {
+        const isCollapsing = collapseAllBtn.textContent === 'Collapse All';
+        collapseAllBtn.textContent = isCollapsing ? 'Expand All' : 'Collapse All';
+
+        collapsibles.forEach((collapsible) => {
+            if (counter % 2 == 0) {                                                                             //even
+                collapsible.style.maxHeight = "0px";
+            }
+            else if (counter % 2 != 0) {                                                                        //odd
+                collapsible.style.maxHeight = collapsible.scrollHeight + "px";
+            }
+            else if (counter == 0) {                                                                            //1st iteration
+                collapsible.style.maxHeight = "0px";
+            }
+        });
+        counter += 1;
+    });
+}
 
 window.onscroll = function () {
     if (progressBar) {
