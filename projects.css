@@ -1,61 +1,206 @@
 .project-category {
+    /* Box Model */
     margin-bottom: 1.25rem;                                 /* Add margin at the bottom of each project category */
 }
 
     .project-category h3 {
+        /* Typography */
         color: #333;                                        /* Set color for project category headings */
         font-size: 1.25rem;                                 /* Set font size for project category headings */
     }
 
     .project-category ul {
         list-style-type: none;                              /* Remove default list style for project category ul */
+
+        /* Box Model */
         margin: 0;                                          /* Remove default margin */
         padding: 0;                                         /* Remove default padding */
     }
 
     .project-category li {
-        background-color: #f9f9f9;                          /* Set background color for project category list items */
-        padding: 0.625rem;                                  /* Add padding to project category list items */
+        /* Box Model */
         margin-bottom: 0.625rem;                            /* Add margin at the bottom of project category list items */
+        padding: 0.625rem;                                  /* Add padding to project category list items */
+        
+        /* Visual */
+        background-color: #f9f9f9;                          /* Set background color for project category list items */
     }
 
-        .project-category li h4 {
-            margin-top: 0;                                  /* Remove top margin for h4 elements in project category */
+        .project-category li h3 {
+            /* Box Model */
+            margin-top: 0;                                  /* Remove top margin for h3 elements in project category */
         }
 
         .project-category li p {
+            /* Box Model */
             margin: 0.3125rem 0;                            /* Set margins for paragraphs in project category */
         }
 
         .project-category li ul {
+            /* Box Model */
             margin-left: 1.25rem;                           /* Indent nested ul list in project category */
         }
 
             .project-category li ul li {
+                /* Box Model */
                 margin: 0.1875rem 0;                        /* Set margin for nested list items in project category */
             }
 
                 .project-category li ul li a {
+                    /* Typography */
                     color: #007bff;                         /* Set color for links in nested list items */
                     text-decoration: none;                  /* Remove underline from links */
                 }
 
                     .project-category li ul li a:hover {
+                        /* Typography? */
                         text-decoration: underline;         /* Underline links on hover */
                     }
 
-.project-description {
+.project-header {
     display: flex;
-    align-items: baseline;
-    margin-left: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.0625rem;
+    width: 100%;
 }
 
-.left-of-colon {
-    min-width: 0.625rem;                                    /* Adjust as needed */
+.project-title {
+    margin: 0;
+    font-size: 1.8rem;
+    flex: 1 1 auto;
+    padding-left: 0.3125rem;
+}
+
+.btn-wrapper {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.3125rem;
+    padding: 0.0625rem;
+}
+
+.collapse-btn {
+    flex: 1 1 100%;
+    width: auto;
+    padding: 0.5rem 1rem;
     text-align: left;
+
+    /* Visual */
+    background-color: #929292;
+    border-radius: 0.25rem;
+}
+@media (max-width: 600px) {
+    .collapse-btn {
+        width: 100%;
+        text-align: right;
+    }
 }
 
-.after-colon {
-    flex: 1;
-    padding-left: 0.625rem;
+.project-content {
+    /* Box Model */
+    margin-top: 0.625rem;
+    margin-left: 0.3125rem;
+    margin-bottom: 0.5rem;
+
+    /* Layout */
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+    gap: 0.5ch;                                             /* Roughly the width of one character */
+}
+
+.project-info {
+    /* Typography */
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.project-details {
+    /* Typography */
+    text-align: left;
+    word-break: break-word;
+}
+
+button {
+    /* Positioning */
+    z-index: 1;
+
+    /* Box Model */
+    margin-top: 0;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+
+    /* Typography */
+    font-size: 1rem;
+    color: white;
+
+    /* Interactive */
+    cursor: pointer;
+}
+
+.collapsible {
+    /* Layout */
+    overflow: hidden;
+
+    /* Interactive */
+    transition: max-height 0.3s ease-out;
+}
+
+.toggle-btn {
+    /* Box Model */
+    padding: 0.625rem;
+    width: 100%;
+    border-color: #929292;
+    border: thin;
+    border-width: 0;
+
+    /* Typography */
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+
+    /* Visual */
+    background-color: #929292;
+    border-radius: 0.25rem;
+
+    /* Interactive */
+    cursor: pointer;
+}
+    .toggle-btn:hover {
+        /* Visual */
+        background-color: #616161;
+    }
+
+#collapse-btn {
+    /* Box Model */
+    padding: 0.625rem;
+    width: 50%;
+    border-color: #929292;
+    border: thin;
+    border-width: 0;
+
+    /* Typography */
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+
+    /* Visual */
+    background-color: #929292;
+    border-radius: 0.25rem;
+
+    /* Interactive */
+    cursor: pointer;
+}
+    #collapse-btn:hover {
+        /* Visual */
+        background-color: #616161;
+    }
+
+.collapsible-content {
+    /* Layout */
+    display: none;
 }
