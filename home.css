@@ -1,44 +1,68 @@
 .narrow-left-column {
-    min-height: 18.75rem;
-    flex: 0 0 20%;
+    /* Box Model */
     padding: 0.625rem;
-    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
-    background-color: rgba(0, 255, 0, 0.1);                  /* Green */
+    min-height: 18.75rem;
+    box-sizing: border-box;                                     /* Include padding and border in the box's total width and height */
+
+    /* Layout */
+    flex: 0 0 20%;
+
+    /* Visual */
+    background-color: rgba(0, 255, 0, 0.1);                     /* Green */
 }
 
 .wide-right-column {
-    min-height: 18.75rem;
-    flex: 0 0 80%;
+    /* Box Model */
     padding: 0.625rem;
-    box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
-    background-color: rgba(255, 0, 0, 0.1);                  /* Light red for visibility */
+    min-height: 18.75rem;
+    box-sizing: border-box;                                     /* Include padding and border in the box's total width and height */
+
+    /* Layout */
+    flex: 0 0 80%;
+
+    /* Visual */
+    background-color: rgba(255, 0, 0, 0.1);                     /* Light red for visibility */
 }
 @media (max-width: 600px) {
     .wide-right-column {
-        min-height: 18.75rem;
-        flex: 0 0 80%;
+        /* Box Model */
         padding: 0.625rem;
+        min-height: 18.75rem;
         box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
+
+        /* Layout */
+        flex: 0 0 80%;
+
+        /* Visual */
         background-color: rgba(255, 0, 0, 0.1);                  /* Light red for visibility */
     }
 }
 
 .name-role {
+    /* Box Model */
     margin-top: 2.5rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+
+    /* Layout */
+    flex: 1 1 70%;
+
+    /* Typography */
     font-size: 1.625rem;
     font-family: Verdana;
-    flex: 1 1 70%;
 }
 
 .purpose {
+    /* Box Model */
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+
+    /* Layout */
     flex: 1 1 70%;
 }
 
 .overview {
+    /* Box Model */
     margin-left: 1.25rem;
     margin-right: 1.25rem;
     max-width: 100%;
@@ -49,70 +73,103 @@
     width: 100%;
     min-height: 100%;
     box-sizing: border-box;
+
+    /* Visual */
+    /*background-color: rgba(0, 0, 255, 0.1);*/                  /* Blue */
+    /*background: #dbdbdb;*/
 }
 
 .section1 {
+    /* Box Model */
+    margin-top: 0.3125rem;
+    padding-right: 0.3125rem;
+
+    /* Layout */
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 0.3125rem;
-    gap: 1rem;
     align-items: normal;
-    padding-right: 0.3125rem;
+    gap: 1rem;
 }
 
 .section2 {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
+    /* Box Model */
     margin-bottom: 2rem;
+
+    /* Typography */
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
 }
 
 .text-block-1 {
-    flex: 1 1 0;
-    min-width: 250px;
-    word-wrap: break-word;
+    /* Box Model */
+    min-width: 15.625rem;
     padding-right: 0.625rem;
+
+    /* Layout */
+    flex: 1 1 0;
+
+    /* Typography */
+    word-wrap: break-word;
 }
 
 .image-block {
-    flex: 0 0 auto; /* prevents resizing */
-    min-width: auto;
+    /* Layout */
+    flex: 0 0 auto;                                              /* Prevents resizing */
+
+    /* Box Model */
     margin: 2.5rem 2.5rem 2.5rem 2.815rem;
+    min-width: auto;
 }
 
+/* flex: 0 0 auto means:*/
+/*  0 = don’t grow*/
+/*  0 = don’t shrink*/
+/*  auto = use the content size (in this case, the image's fixed size)*/
+
     .image-block img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover; /* Keeps the image cropped if needed */
-        border-radius: 8px;
+        /* Box Model */
+        width: 15.625rem;
+        height: 15.625rem;
+        object-fit: cover;                                      /* Keeps the image cropped if needed */
+        
+        /* Visual */
+        border-radius: 0.5rem;
     }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .section1 {
+        /* Layout */
         flex-direction: column;
     }
 
     .text-block-1 {
-        order: 1; /* appears first */
+        /* Positioning */
+        order: 1;                                               /* Appears first */
+
+        /* Box Model */
         width: 100%;
     }
 
     .image-block {
-        order: 2; /* appears second */
+        /* Positioning */
+        order: 2;                                               /* Appears second */
+        
+        /* Box Model */
         width: 100%;
     }
 }
 
 .divider {
     /* Box Model */
-    margin: 0.625rem 1.25rem 0.625rem 1.25rem;                                   /* margin: top right bottom left */
-    flex: 1 1 60%;
+    margin: 0.625rem 1.25rem 0.625rem 1.25rem;                  /* margin: top right bottom left */
     height: 0.0625rem;
 
     /* Layout */
+    flex: 1 1 60%;
     align-content: center;
 
     /* Visual */
-    background-color: black;                                /* Thin black line */
+    background-color: black;                                    /* Thin black line */
 }
