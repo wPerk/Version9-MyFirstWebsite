@@ -73,10 +73,6 @@
     width: 100%;
     min-height: 100%;
     box-sizing: border-box;
-
-    /* Visual */
-    /*background-color: rgba(0, 0, 255, 0.1);*/                  /* Blue */
-    /*background: #dbdbdb;*/
 }
 
 .section1 {
@@ -121,11 +117,6 @@
     margin: 2.5rem 2.5rem 2.5rem 2.815rem;
     min-width: auto;
 }
-
-/* flex: 0 0 auto means:*/
-/*  0 = don’t grow*/
-/*  0 = don’t shrink*/
-/*  auto = use the content size (in this case, the image's fixed size)*/
 
     .image-block img {
         /* Box Model */
