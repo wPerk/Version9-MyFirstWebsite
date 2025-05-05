@@ -143,6 +143,14 @@
         width: 100%;
     }
 
+    .text-block-2 {
+        /* Positioning */
+        order: 3;                                               /* Appears third */
+
+        /* Box Model */
+        width: 100%;
+    }
+
     .image-block {
         /* Positioning */
         order: 2;                                               /* Appears second */
