@@ -2,6 +2,7 @@ html, body {
     /* Box Model */
     margin: 0;                                              /* Removes default padding around the page */
     padding: 0;                                             /* Removes default padding around the page */
+    width: 100%;
 
     /* Typography */
     font-family: Verdana, sans-serif;                       /* Sets a clean, sans-serif font for */
@@ -13,12 +14,22 @@ html, body {
 
 h2 {
     /* Box Model */
-    margin-left: 1.25rem; 1,}
+    margin-left: 1.25rem;
+}
 
 h3 {
     /* Box Model */
     margin: 0.3125rem;
     padding: 0.0625rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    width: 100%;
+    margin: 0 auto;                                         /* centers it */
 }
 
 /* === Header === */
@@ -28,6 +39,7 @@ header {
 
     /* Box Model */
     padding: 1.875rem 1.25rem;                              /* Adds spacing inside the header */
+    width: 100%;
     
     /* Typography */
     font-size: 1.5rem;                                      /* Increases font size for better visibility */
@@ -71,6 +83,7 @@ footer {
     /* Box Model */
     margin-top: 0;                                          /* Adds space above the footer */
     padding: 0.3125rem 0;                                   /* Adds vertical padding inside the footer */
+    width: 100%;
 
     /* Typography */
     text-align: center;                                     /* Centers the text in the footer */
@@ -139,6 +152,7 @@ nav {
 
     /* Box Model */
     padding: 0.625rem 1.25rem;                              /* Add padding to navbar */
+    width: 100%;
 
     /* Typography */
     color: #fff;                                            /* Set text color for navbar */
@@ -285,7 +299,7 @@ nav {
 
     /* Box Model */
     padding: 0.625rem;
-    width: 100%;                                            /* Ensures that the main class fills the whole screen */
+    width: 100%;
     min-height: 100%;                                       /* Ensures that the main class fills the whole screen */
 }
 
@@ -322,6 +336,9 @@ nav {
 }
 
 .row {
+    /* Box Model */
+    width: 100%;
+
     /* Layout */
     display: flex;
     justify-content: space-between;
@@ -370,3 +387,4 @@ nav {
     box-sizing: border-box;                                  /* Include padding and border in the box's total width and height */
     background-color: rgba(255, 0, 255, 0.1);                /* Magenta */
 }
+
