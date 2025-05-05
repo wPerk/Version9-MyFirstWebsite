@@ -71,7 +71,7 @@ if (collapseAllBtn) {
                 collapsible.style.maxHeight = "0px";
             }
         });
-        counter += 1;
+        counter += 1;       /* I should probably clear this counter every so often */
     });
 }
 
