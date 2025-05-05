@@ -10,176 +10,178 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-        <header>    <h1>Welcome to My Website</h1>    </header>
+        <div class="page-wrapper">
+            <header>    <h1>Welcome to My Website</h1>    </header>
 
-        <i class="fas fa-home home-button" onclick="goHome()"></i>
+            <i class="fas fa-home home-button" onclick="goHome()"></i>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div>
-                <label class="menu-icon">&#9776;</label>
-                <div class="menu-list">
-                    <ul class="dropdown">
-                        <li><a href="index.html">Index</a></li>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="progress-container">
-            <div class="progress-bar" id="myProgressBar"></div>
-        </div>
-
-        <main class="main-content">
-            <div class="project-header">
-                <h2 class="project-title">Projects</h2>
-                <div class="btn-wrapper">
-                    <button class="collapse-btn">Collapse All</button>
-                </div>
-            </div>
-
-            <div class="content-container">
-                <div class="row">
-                    <div class="label"><u class="underline"><b>Content Container</b></u></div>
-                    <div class="dimensions">Current Dimensions: <span id="size-display-content">Loading...</span></div>
-                </div>
-
-                <section class="project-category">
-                    <button class="toggle-btn">    Notable Projects    </button>
-
-                    <div class="collapsible">
-                        <ul>
-                            <li>
-                                <h3>Project Name</h3>
-                                <div class="project-content">
-                                    <!-- DESCRIPTION -->
-                                    <div class="project-info">Description:</div>
-                                    <div class="project-details">
-                                        This is a description of the project and its functions. This is a description of the project and its functions. This is a description of the project and its functions.
-                                    </div>
-                                    <!-- DOCUMENTS -->
-                                    <div class="project-info">Documents:</div>
-                                    <div class="project-details">
-                                        This is for documents like diagrams, notes, progress, etc. This is for documents like diagrams, notes, progress, etc. This is for documents like diagrams, notes, progress, etc.
-                                    </div>
-                                    <!-- CODE -->
-                                    <div class="project-info">Code:</div>
-                                    <div class="project-details">
-                                        This is for files containing code for further understanding. This is for files containing code for further understanding. This is for files containing code for further understanding.
-                                    </div>
-                                    <!-- PICTURES -->
-                                    <div class="project-info">Pictures:</div>
-                                    <div class="project-details">
-                                        This is for pictures of the project at various stages. This is for pictures of the project at various stages. This is for pictures of the project at various stages.
-                                    </div>
-                                    <!-- VIDEOS -->
-                                    <div class="project-info">Videos:</div>
-                                    <div class="project-details">
-                                        This is for video demonstrations of the project. This is for video demonstrations of the project. This is for video demonstrations of the project.
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Arduino Tank</h3>
-                                <div class="project-content">
-                                    <!-- DESCRIPTION -->
-                                    <div class="project-info">Description:</div>
-                                    <div class="project-details">
-                                        Joystick positions are read as x, y coordinates by controller, then communicates this data via radio frequency to the tank which drives the motors either forward or backward to make the tank move forward, backward, or perform turns at various angle as well as on the spot.
-                                    </div>
-                                    <!-- DOCUMENTS -->
-                                    <div class="project-info">Documents:</div>
-                                    <div class="project-details">
-                                        <a href="P1_ArduinoTank_Diagrams.pdf"> Block and Circuit Diagrams</a>
-                                    </div>
-                                    <!-- CODE -->
-                                    <div class="project-info">Code:</div>
-                                    <div class="project-details">
-                                        <a href="P1_Controller7.txt"> Controller-V1</a>, <a href="P1_Controller8.txt">Controller-V2</a>,
-                                        <a href="P1_Tank9_1.txt">Tank-V1</a>, <a href="P1_Tank10.txt">Tank-V2</a>
-                                    </div>
-                                    <!-- PICTURES -->
-                                    <div class="project-info">Pictures:</div>
-                                    <div class="project-details">
-                                        <a href="P1-ArduinoTank-Device_Old.jpg"> Old Controller and Tank</a>,
-                                        <a href="P1-ArduinoTank-Device_Case.jpg">New Controller</a>,
-                                        <a href="P1-ArduinoTank-Device_Front.jpg">New Tank Front</a>,
-                                        <a href="P1-ArduinoTank-Device_Back1.jpg">New Tank Back</a>,
-                                        <a href="P1-ArduinoTank-Device_Bottom.jpg">New Tank Bottom</a>
-                                    </div>
-                                    <!-- VIDEOS -->
-                                    <div class="project-info">Videos:</div>
-                                    <div class="project-details">
-                                        <a href="P1-ArduinoTank-Test_Old.mp4"> Old Controller and Tank</a>,
-                                        <a href="P1-ArduinoTank-Test_New.mp4">New Controller and Tank</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Audio Amplifier</h3>
-                                <div class="project-content">
-                                    <!-- DESCRIPTION -->
-                                    <div class="project-info">Description:</div>
-                                    <div class="project-details">
-                                        An amplifier circuit takes MP3 input via 3.5mm headphone jack, then amplifies and converts the signal into an audible sound via a small speaker.
-                                    </div>
-                                    <!-- DOCUMENTS -->
-                                    <div class="project-info">Documents:</div>
-                                    <div class="project-details">
-                                        <a href="AudioAmplifier-CircuitDiagram.pdf"> Diagrams</a>, <a href="AudioAmplifier-PartsList.pdf">Parts List</a>
-                                    </div>
-                                    <!-- PICTURES -->
-                                    <div class="project-info">Pictures:</div>
-                                    <div class="project-details">
-                                        <a href="AudioAmplifier-Device.jpg"> Audio Amplifier</a>
-                                    </div>
-                                    <!-- VIDEOS -->
-                                    <div class="project-info">Videos:</div>
-                                    <div class="project-details">
-                                        <a href="AudioAmplifier-Test.mp4"> Audio Amplifier</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Single Stage Coil Gun</h3>
-                                <div class="project-content">
-                                    <!-- DESCRIPTION -->
-                                    <div class="project-info">Description:</div>
-                                    <div class="project-details">
-                                        A tube wound with layers of magnet wire launches a small metal bits with the help of a voltage doubler by pressing a button that pulls the metal towards the center. The metal bit passes the center due to momentum, interrupting a sensor that temporarily interrupts the power which causes the metal bit to continue and launch forward.
-                                    </div>
-                                    <!-- DOCUMENTS -->
-                                    <div class="project-info">Documents:</div>
-                                    <div class="project-details">
-                                        <a href="SingleStageCoilGun-CircuitDiagram.pdf"> Diagrams</a>, <a href="SingleStageCoilGun-Calculations.pdf">Calculations</a>
-                                    </div>
-                                    <!-- PICTURES -->
-                                    <div class="project-info">Pictures:</div>
-                                    <div class="project-details">
-                                        <a href="SingleStageCoilGun-Device.jpg"> Coil Gun</a>
-                                    </div>
-                                    <!-- VIDEOS -->
-                                    <div class="project-info">Videos:</div>
-                                    <div class="project-details">
-                                        <a href="SingleStageCoilGun-Test.mp4"> Coil Gun</a>
-                                    </div>
-                                </div>
-                            </li>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div>
+                    <label class="menu-icon">&#9776;</label>
+                    <div class="menu-list">
+                        <ul class="dropdown">
+                            <li><a href="index.html">Index</a></li>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
-                </section>
-            </div>
-        </main>
+                </div>
+            </nav>
 
-        <footer>    <p>&copy; 2025 My First Website</p>    </footer>
+            <div class="progress-container">
+                <div class="progress-bar" id="myProgressBar"></div>
+            </div>
+
+            <main class="main-content">
+                <div class="project-header">
+                    <h2 class="project-title">Projects</h2>
+                    <div class="btn-wrapper">
+                        <button id="collapse-btn">Collapse All</button>
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <div class="row">
+                        <div class="label"><u class="underline"><b>Content Container</b></u></div>
+                        <div class="dimensions">Current Dimensions: <span id="size-display-content">Loading...</span></div>
+                    </div>
+
+                    <section class="project-category">
+                        <button class="toggle-btn">    Notable Projects    </button>
+
+                        <div class="collapsible">
+                            <ul>
+                                <li>
+                                    <h3>Project Name</h3>
+                                    <div class="project-content">
+                                        <!-- DESCRIPTION -->
+                                        <div class="project-info">Description:</div>
+                                        <div class="project-details">
+                                            This is a description of the project and its functions. This is a description of the project and its functions. This is a description of the project and its functions.
+                                        </div>
+                                        <!-- DOCUMENTS -->
+                                        <div class="project-info">Documents:</div>
+                                        <div class="project-details">
+                                            This is for documents like diagrams, notes, progress, etc. This is for documents like diagrams, notes, progress, etc. This is for documents like diagrams, notes, progress, etc.
+                                        </div>
+                                        <!-- CODE -->
+                                        <div class="project-info">Code:</div>
+                                        <div class="project-details">
+                                            This is for files containing code for further understanding. This is for files containing code for further understanding. This is for files containing code for further understanding.
+                                        </div>
+                                        <!-- PICTURES -->
+                                        <div class="project-info">Pictures:</div>
+                                        <div class="project-details">
+                                            This is for pictures of the project at various stages. This is for pictures of the project at various stages. This is for pictures of the project at various stages.
+                                        </div>
+                                        <!-- VIDEOS -->
+                                        <div class="project-info">Videos:</div>
+                                        <div class="project-details">
+                                            This is for video demonstrations of the project. This is for video demonstrations of the project. This is for video demonstrations of the project.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Arduino Tank</h3>
+                                    <div class="project-content">
+                                        <!-- DESCRIPTION -->
+                                        <div class="project-info">Description:</div>
+                                        <div class="project-details">
+                                            Joystick positions are read as x, y coordinates by controller, then communicates this data via radio frequency to the tank which drives the motors either forward or backward to make the tank move forward, backward, or perform turns at various angle as well as on the spot.
+                                        </div>
+                                        <!-- DOCUMENTS -->
+                                        <div class="project-info">Documents:</div>
+                                        <div class="project-details">
+                                            <a href="P1_ArduinoTank_Diagrams.pdf"> Block and Circuit Diagrams</a>
+                                        </div>
+                                        <!-- CODE -->
+                                        <div class="project-info">Code:</div>
+                                        <div class="project-details">
+                                            <a href="P1_Controller7.txt"> Controller-V1</a>, <a href="P1_Controller8.txt">Controller-V2</a>,
+                                            <a href="P1_Tank9_1.txt">Tank-V1</a>, <a href="P1_Tank10.txt">Tank-V2</a>
+                                        </div>
+                                        <!-- PICTURES -->
+                                        <div class="project-info">Pictures:</div>
+                                        <div class="project-details">
+                                            <a href="P1-ArduinoTank-Device_Old.jpg"> Old Controller and Tank</a>,
+                                            <a href="P1-ArduinoTank-Device_Case.jpg">New Controller</a>,
+                                            <a href="P1-ArduinoTank-Device_Front.jpg">New Tank Front</a>,
+                                            <a href="P1-ArduinoTank-Device_Back1.jpg">New Tank Back</a>,
+                                            <a href="P1-ArduinoTank-Device_Bottom.jpg">New Tank Bottom</a>
+                                        </div>
+                                        <!-- VIDEOS -->
+                                        <div class="project-info">Videos:</div>
+                                        <div class="project-details">
+                                            <a href="P1-ArduinoTank-Test_Old.mp4"> Old Controller and Tank</a>,
+                                            <a href="P1-ArduinoTank-Test_New.mp4">New Controller and Tank</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Audio Amplifier</h3>
+                                    <div class="project-content">
+                                        <!-- DESCRIPTION -->
+                                        <div class="project-info">Description:</div>
+                                        <div class="project-details">
+                                            An amplifier circuit takes MP3 input via 3.5mm headphone jack, then amplifies and converts the signal into an audible sound via a small speaker.
+                                        </div>
+                                        <!-- DOCUMENTS -->
+                                        <div class="project-info">Documents:</div>
+                                        <div class="project-details">
+                                            <a href="AudioAmplifier-CircuitDiagram.pdf"> Diagrams</a>, <a href="AudioAmplifier-PartsList.pdf">Parts List</a>
+                                        </div>
+                                        <!-- PICTURES -->
+                                        <div class="project-info">Pictures:</div>
+                                        <div class="project-details">
+                                            <a href="AudioAmplifier-Device.jpg"> Audio Amplifier</a>
+                                        </div>
+                                        <!-- VIDEOS -->
+                                        <div class="project-info">Videos:</div>
+                                        <div class="project-details">
+                                            <a href="AudioAmplifier-Test.mp4"> Audio Amplifier</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Single Stage Coil Gun</h3>
+                                    <div class="project-content">
+                                        <!-- DESCRIPTION -->
+                                        <div class="project-info">Description:</div>
+                                        <div class="project-details">
+                                            A tube wound with layers of magnet wire launches a small metal bits with the help of a voltage doubler by pressing a button that pulls the metal towards the center. The metal bit passes the center due to momentum, interrupting a sensor that temporarily interrupts the power which causes the metal bit to continue and launch forward.
+                                        </div>
+                                        <!-- DOCUMENTS -->
+                                        <div class="project-info">Documents:</div>
+                                        <div class="project-details">
+                                            <a href="SingleStageCoilGun-CircuitDiagram.pdf"> Diagrams</a>, <a href="SingleStageCoilGun-Calculations.pdf">Calculations</a>
+                                        </div>
+                                        <!-- PICTURES -->
+                                        <div class="project-info">Pictures:</div>
+                                        <div class="project-details">
+                                            <a href="SingleStageCoilGun-Device.jpg"> Coil Gun</a>
+                                        </div>
+                                        <!-- VIDEOS -->
+                                        <div class="project-info">Videos:</div>
+                                        <div class="project-details">
+                                            <a href="SingleStageCoilGun-Test.mp4"> Coil Gun</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <footer>    <p>&copy; 2025 My First Website</p>    </footer>
+        </div>
 
         <script src="script.js"></script>
     </body>
