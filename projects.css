@@ -63,7 +63,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 0.0625rem;
-    width: 100%;
+    width: 100%;                                           /* Ensures that the main class fills the whole screen */
 }
 
 .project-title {
@@ -178,7 +178,7 @@ button {
 #collapse-btn {
     /* Box Model */
     padding: 0.625rem;
-    width: 50%;
+    width: 100%;
     border-color: #929292;
     border: thin;
     border-width: 0;
