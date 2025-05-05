@@ -10,50 +10,52 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-        <header>    <h1>Welcome to My Website</h1>    </header>
+        <div class="page-wrapper">
+            <header>    <h1>Welcome to My Website</h1>    </header>
 
-        <i class="fas fa-home home-button" onclick="goHome()"></i>
+            <i class="fas fa-home home-button" onclick="goHome()"></i>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div>
-                <label class="menu-icon">&#9776;</label>
-                <div class="menu-list">
-                    <ul class="dropdown">
-                        <li><a href="index.html">Index</a></li>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div>
+                    <label class="menu-icon">&#9776;</label>
+                    <div class="menu-list">
+                        <ul class="dropdown">
+                            <li><a href="index.html">Index</a></li>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="myProgressBar"></div>
+            </div>
+
+            <main class="main-content">
+                <div>    <h2>Resume</h2>    </div>
+
+                <div class="content-container">
+                    <div class="row">
+                        <div class="label"><u class="underline"><b>Content Container</b></u></div>
+                        <div class="dimensions">Current Dimensions: <span id="size-display-content">Loading...</span></div>
+                    </div>
+
+                    <ul style="margin-left: 1.25rem;">
+                        <li>Click link to view file: <a href="Resume - Wade Perkins - Website.pdf">Resume</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </main>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="myProgressBar"></div>
+            <footer>    <p>&copy; 2025 My First Website</p>    </footer>
         </div>
-
-        <main class="main-content">
-            <div>    <h2>Resume</h2>    </div>
-
-            <div class="content-container">
-                <div class="row">
-                    <div class="label"><u class="underline"><b>Content Container</b></u></div>
-                    <div class="dimensions">Current Dimensions: <span id="size-display-content">Loading...</span></div>
-                </div>
-                
-                <ul style="margin-left: 1.25rem;">
-                    <li>Click link to view file: <a href="Resume - Wade Perkins - Website.pdf">Resume</a></li>
-                </ul>
-            </div>
-        </main>
-
-        <footer>    <p>&copy; 2025 My First Website</p>    </footer>
 
         <script src="script.js"></script>
     </body>
